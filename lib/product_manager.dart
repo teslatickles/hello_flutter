@@ -12,7 +12,7 @@ class _ProductManagerState extends State<ProductManager> {
   List<String> _products = ['Food Tester'];
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: [
         Container(
           margin: EdgeInsets.all(10.0),
