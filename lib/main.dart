@@ -9,7 +9,7 @@ class CameraApp extends StatelessWidget {
     return MaterialApp(
       title: "Hunter's Dream",
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.grey,
       ),
       home: FirstScreen(),
     );

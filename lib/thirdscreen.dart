@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './firstscreen.dart';
+import 'bottom_bar.dart';
 
 class ThirdScreen extends StatelessWidget {
   @override
@@ -11,31 +12,18 @@ class ThirdScreen extends StatelessWidget {
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
+          backgroundColor: Colors.black,
+          foregroundColor: Colors.grey,
           onPressed: () {},
         ),
-        bottomNavigationBar: BottomAppBar(
-          shape: CircularNotchedRectangle(),
-          notchMargin: 4.0,
-          child: Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              IconButton(
-                icon: Icon(Icons.menu),
-                onPressed: () {},
-              ),
-              IconButton(
-                icon: Icon(Icons.search),
-                onPressed: () {},
-              )
-            ],
-          ),
-        ),
+        bottomNavigationBar: BottomBar(),
         body: Center(
             child: RaisedButton(
           child: Text('Go to First'),
           onPressed: () => Navigator.of(context)
               .push(MaterialPageRoute(builder: (_) => FirstScreen())),
-        )));
+        ),
+      ),
+    );
   }
 }
