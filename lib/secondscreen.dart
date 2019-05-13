@@ -17,12 +17,23 @@ class SecondScreen extends StatelessWidget {
         onPressed: () {},
       ),
       bottomNavigationBar: BottomBar(),
-      body: Center(
-        child: RaisedButton(
-          child: const Text('Go to Third'),
-          onPressed: () => Navigator.of(context)
-              .push(MaterialPageRoute(builder: (_) => ThirdScreen())),
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Center(
+              child: RaisedButton(
+            child: const Text('Here are some things'),
+            onPressed: () => {debugPrint('hello')},
+          )),
+          Center(
+            child: RaisedButton(
+              child: const Text('Go to Third'),
+              onPressed: () => Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (_) => ThirdScreen())),
+            ),
+          )
+        ],
       ),
     );
   }

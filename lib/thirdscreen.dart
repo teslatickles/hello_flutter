@@ -1,28 +1,23 @@
 import 'package:flutter/material.dart';
-import './firstscreen.dart';
-import 'bottom_bar.dart';
+import 'package:hello_flutter/bottom_bar.dart';
+import 'package:hello_flutter/radial_menu.dart';
+// import 'package:vector_math/vector_math.dart' show radians;
+// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+// import './firstscreen.dart';
+// import 'bottom_bar.dart';
 
 class ThirdScreen extends StatelessWidget {
+  // get color => GetColor.backgroundController;
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text('Third Screen'),
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.blueAccent,
+        body: SizedBox.expand(
+          child: RadialMenu(),
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
-          backgroundColor: Colors.black,
-          foregroundColor: Colors.grey,
-          onPressed: () {},
-        ),
-        bottomNavigationBar: BottomBar(),
-        body: Center(
-            child: RaisedButton(
-          child: Text('Go to First'),
-          onPressed: () => Navigator.of(context)
-              .push(MaterialPageRoute(builder: (_) => FirstScreen())),
-        ),
+        // bottomNavigationBar: BottomBar(),
       ),
     );
   }
